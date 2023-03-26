@@ -1,4 +1,7 @@
-.custom-icon-with-text {
+.icon-with-text-container {
     width: 100%;
-    margin-top: 12rem;
+}
+
+.hr {
+    border: 1px solid black;
 }
