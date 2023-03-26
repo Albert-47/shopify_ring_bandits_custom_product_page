@@ -12,6 +12,8 @@
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+  {{ 'custom-component-icon-with-text.css' | asset_url | stylesheet_tag }}
+
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -429,10 +431,6 @@
                   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                 {%- endif -%}
               </product-recommendations>
-            {%- when 'icon-with-text' -%}
-              {% render 'icon-with-text',
-                block: block
-              %}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -447,6 +445,15 @@
         {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
       </div>
     {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'icon-with-text' -%}
+          {% render 'icon-with-text',
+            block: block
+          %}
+      {%- endcase -%}
+    {%- endfor -%}
   </div>
 
   {% render 'product-media-modal' variant_images: variant_images %}
