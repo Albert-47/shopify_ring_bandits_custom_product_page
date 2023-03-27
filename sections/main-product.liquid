@@ -12,7 +12,7 @@
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-  {{ 'custom-component-icon-with-text.css' | asset_url | stylesheet_tag }}
+  {{ 'custom-component-product-info.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -453,11 +453,12 @@
       <hr class="hr hr-below">
     </div>
     
-    <div class="icon-with-text-container">
+    <div class="description-container">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
         {%- when 'description' -%}
           {%- if product.description != blank -%}
+            <h2 class="custom-header description-header">Description</h2>
             <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
               {{ product.description }}
             </div>

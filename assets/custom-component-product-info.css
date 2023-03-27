@@ -1,0 +1,23 @@
+/* General */
+
+
+
+/* Icons with text */
+
+.icon-with-text-container {
+    width: 100%;
+}
+
+.hr {
+    border: 1px solid black;
+}
+
+/* Description */
+
+.description-container {
+    width: 100%;
+}
+
+.description-header {
+    margin-top: 0;
+}
