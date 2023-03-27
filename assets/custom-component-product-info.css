@@ -21,3 +21,13 @@
 .description-header {
     margin-top: 0;
 }
+
+.description-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-container {
+    width: 60%;
+}
