@@ -12,6 +12,11 @@
     border: 1px solid black;
 }
 
+.icon-with-text img {
+    height: auto;
+    width: 50%;
+}
+
 /* Description */
 
 .description-container {
