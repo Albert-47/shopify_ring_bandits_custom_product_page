@@ -1,0 +1,213 @@
+<section class="section-extra-icons page-width">
+
+  {{ 'section-extra-icons.css' | asset_url | stylesheet_tag }}
+
+
+    {% comment %}
+        Desktop view
+    {% endcomment %}
+
+    <hr class="hr">
+
+    <div class="icons-container">
+        {% if section.settings.icon1 != blank %}
+        <div class="icon-item">
+            <img
+            src="{{ section.settings.icon1 | image_url }}"
+            role="presentation"
+            height="auto"
+            width="auto"
+            loading="lazy"
+          >
+          {% if section.settings.title1 != blank %}
+            <h3 style="margin-top: 2rem;">{{- section.settings.title1 -}}</h3>
+          {% endif %}
+          {% if section.settings.text1 != blank %}
+            <p style="margin-top: 2rem;">{{- section.settings.text1 -}}</p>
+          {% endif %}
+          {% if section.settings.url1 != blank %}
+            <a class="lm-text" target="_blank" href="{{- section.settings.url1 -}}">Learn more</a>
+          {% endif %}
+        </div>
+        {% endif %}
+        
+        {% if section.settings.icon2 != blank %}
+        <div class="icon-item">
+            <img
+            src="{{ section.settings.icon2 | image_url }}"
+            role="presentation"
+            height="auto"
+            width="auto"
+            loading="lazy"
+          >
+          {% if section.settings.title2 != blank %}
+            <h3 style="margin-top: 2rem;">{{- section.settings.title2 -}}</h3>
+          {% endif %}
+          {% if section.settings.text2 != blank %}
+            <p style="margin-top: 2rem;">{{- section.settings.text2 -}}</p>
+          {% endif %}
+          {% if section.settings.url2 != blank %}
+            <a class="lm-text" target="_blank" href="{{- section.settings.url2 -}}">Learn more</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if section.settings.icon3 != blank %}
+        <div class="icon-item">
+            <img
+            src="{{ section.settings.icon3 | image_url }}"
+            role="presentation"
+            height="auto"
+            width="auto"
+            loading="lazy"
+          >
+          {% if section.settings.title3 != blank %}
+            <h3 style="margin-top: 2rem;">{{- section.settings.title3 -}}</h3>
+          {% endif %}
+          {% if section.settings.text3 != blank %}
+            <p style="margin-top: 2rem;">{{- section.settings.text3 -}}</p>
+          {% endif %}
+          {% if section.settings.url3 != blank %}
+            <a class="lm-text" target="_blank" href="{{- section.settings.url3 -}}">Learn more</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if section.settings.icon4 != blank %}
+        <div class="icon-item">
+            <img
+            src="{{ section.settings.icon4 | image_url }}"
+            role="presentation"
+            height="auto"
+            width="auto"
+            loading="lazy"
+          >
+          {% if section.settings.title4 != blank %}
+            <h3 style="margin-top: 2rem;">{{- section.settings.title4 -}}</h3>
+          {% endif %}
+          {% if section.settings.text4 != blank %}
+            <p style="margin-top: 2rem;">{{- section.settings.text4 -}}</p>
+          {% endif %}
+          {% if section.settings.url4 != blank %}
+            <a class="lm-text" target="_blank" href="{{- section.settings.url4 -}}">Learn more</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+
+    <hr class="hr">
+
+
+</section>
+
+{% schema %}
+    {
+      "name": "Extra Icons",
+      "settings": [
+        {
+        "type": "header",
+        "content": "First Icon"
+        },
+        {
+        "type": "image_picker",
+        "id": "icon1",
+        "label": "Icon 1 image"
+        },
+        {
+            "type": "text",
+            "id": "title1",
+            "label": "Icon 1 Title"
+        },
+        {
+            "type": "text",
+            "id": "text1",
+            "label": "Icon 1 Text"
+        },
+        {
+            "type": "url",
+            "id": "url1",
+            "label": "Icon 1 url"
+        },
+        {
+        "type": "header",
+        "content": "Second Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon2",
+            "label": "Icon 2 image"
+        },
+        {
+            "type": "text",
+            "id": "title2",
+            "label": "Icon 2 Title"
+        },
+        {
+            "type": "text",
+            "id": "text2",
+            "label": "Icon 2 Text"
+        },
+        {
+            "type": "url",
+            "id": "url2",
+            "label": "Icon 2 url"
+        },
+        {
+        "type": "header",
+        "content": "Third Icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon3",
+            "label": "Icon 3 image"
+        },
+        {
+            "type": "text",
+            "id": "title3",
+            "label": "Icon 3 Title"
+        },
+        {
+            "type": "text",
+            "id": "text3",
+            "label": "Icon 3 Text"
+        },
+        {
+            "type": "url",
+            "id": "url3",
+            "label": "Icon 3 url"
+        },
+        {
+        "type": "header",
+        "content": "Fourth Icon"
+        },
+        {
+        "type": "image_picker",
+        "id": "icon4",
+        "label": "Icon 4 image"
+        },
+        {
+            "type": "text",
+            "id": "title4",
+            "label": "Icon 4 Title"
+        },
+        {
+            "type": "text",
+            "id": "text4",
+            "label": "Icon 4 Text"
+        },
+        {
+            "type": "url",
+            "id": "url4",
+            "label": "Icon 4 url"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Extra Icons",
+          "category": "section",
+          "settings": {}
+        }
+      ]
+    }
+    {% endschema %}

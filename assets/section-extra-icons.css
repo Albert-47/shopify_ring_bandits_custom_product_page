@@ -1,0 +1,23 @@
+.section-extra-icons {
+    width: 100%;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hr {
+    border: 1px solid black;
+    margin: 5rem 2rem;
+}
+
+.icon-item {
+    max-width: 23%;
+}
+
+.lm-text {
+    color: black;
+    font-weight: bold;
+}
