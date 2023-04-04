@@ -1,5 +1,24 @@
 /* General */
 
+/* Images layout */
+
+.custom-image-thumbnails-container{
+    width: 10%;
+}
+
+.custom-selected-image {
+    width: 90%;
+    float: right;
+}
+
+.custom-image-thumbnails {
+    width: 100%;
+    flex-direction: column;
+}
+
+.custom-image-thumbnail {
+    width: 100% !important;
+}
 
 
 /* Icons with text */

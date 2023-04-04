@@ -53,7 +53,7 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter">
+  <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="custom-selected-image slider-mobile-gutter">
     {%- unless is_duplicate -%}
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
         {{ 'accessibility.skip_to_product_info' | t }}
@@ -167,7 +167,7 @@
   -%}
     <slider-component
       id="GalleryThumbnails-{{ section.id }}{{ id_append }}"
-      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
+      class="custom-image-thumbnails-container thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
       <button
         type="button"
@@ -181,7 +181,7 @@
       </button>
       <ul
         id="Slider-Thumbnails-{{ section.id }}{{ id_append }}"
-        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
+        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %} custom-image-thumbnails"
       >
         {%- capture sizes -%}
           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4),
@@ -205,7 +205,7 @@
           -%}
           <li
             id="Slide-Thumbnails-{{ section.id }}-0{{ id_append }}"
-            class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
+            class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %} custom-image-thumbnail"
             data-target="{{ section.id }}-{{ featured_media.id }}"
             data-media-position="{{ media_index }}"
           >
@@ -245,7 +245,7 @@
             -%}
             <li
               id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}{{ id_append }}"
-              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %} custom-image-thumbnail"
               data-target="{{ section.id }}-{{ media.id }}"
               data-media-position="{{ media_index }}"
             >
