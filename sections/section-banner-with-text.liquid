@@ -1,0 +1,94 @@
+<section class="page-width banner-with-text" >
+
+    {% style %}
+
+        .text-wrapper {
+            display: flex;
+            margin-top: 3rem;
+        }
+
+        .banner-title {
+            width: 53%;
+            padding: 0 14%;
+        }
+
+        .rm-button {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            padding: 1.5rem 9rem;
+            background: #BED3E4;
+            font-weight: bold;
+        }
+    {% endstyle %}
+
+            {% comment %}
+                Section begins
+            {% endcomment %}
+
+    {% if section.settings.banner != blank %}
+        <img
+        src="{{ section.settings.banner | image_url }}"
+        role="presentation"
+        height="auto"
+        width="100%"
+        loading="lazy"
+        style="display: block;"
+    >
+    {% endif %}
+
+    <div class="text-wrapper">
+        {% if section.settings.title != blank %}
+            <h3 class="banner-title" >{{- section.settings.title -}}</h3>
+        {% endif %}
+
+        {% if section.settings.paragraph != blank %}
+            <div>
+                <p>{{- section.settings.paragraph -}}</p>
+
+                {% if section.settings.url != blank %}
+                    <a  class="rm-button" href="{{- section.settings.url -}}" target="_blank">READ MORE</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+</section>
+
+
+{% schema %}
+    {
+        "name": "Banner with text",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "Banner Image",
+                "id": "banner"
+            },
+            {
+                "type": "text",
+                "label": "Title",
+                "default": "Learn More About Us",
+                "id": "title"
+            },
+            {
+                "type": "richtext",
+                "label": "Paragraph",
+                "default": "<p>This is some placeholder text to make up for a paragraph</p>",
+                "id": "paragraph"
+            },
+            {
+                "type": "url",
+                "label": "Related URL",
+                "id": "url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Banner with text",
+                "category": "section",
+                "settings": {}
+            }
+        ]
+    }
+{% endschema %}
