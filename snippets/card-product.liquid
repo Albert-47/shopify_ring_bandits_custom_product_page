@@ -32,6 +32,14 @@
       assign ratio = 1
     endif
   -%}
+
+  {% style %}
+      .text-container {
+        text-align: center;
+        text-transform: uppercase;
+      }
+  {% endstyle %}
+
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
@@ -98,7 +106,7 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
+        <div class="card__content text-container">
           <div class="card__information">
             <h3
               class="card__heading"
@@ -135,8 +143,8 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
-        <div class="card__information">
+      <div class="card__content text-container">
+        <div class="card__information text-container">
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -152,7 +160,7 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
-          <div class="card-information">
+          <div class="card-information text-container">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
@@ -351,7 +359,7 @@
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: 100%;"
       >
-        <div class="card__content">
+        <div class="card__content text-container">
           <div class="card__information">
             <h3 class="card__heading">
               <a role="link" aria-disabled="true" class="full-unstyled-link">
@@ -361,14 +369,14 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
+      <div class="card__content text-container">
         <div class="card__information">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>
-          <div class="card-information">
+          <div class="card-information text-container">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
