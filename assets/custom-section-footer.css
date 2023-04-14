@@ -45,3 +45,19 @@
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* Bottom Menus */
+
+.custom-blocks-wrapper {
+    background-color: #1B181A;
+    color: white;
+    padding: 5rem 0;
+}
+
+.footer-block__heading {
+    color: white;
+}
+
+.footer-block__details-content .list-menu__item--link {
+    color: white;
+}
