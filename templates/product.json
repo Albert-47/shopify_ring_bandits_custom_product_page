@@ -3,12 +3,9 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "5ab1a05d-3722-4135-b5d3-05e20c6ee057": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {}
         },
         "title": {
           "type": "title",
@@ -24,14 +21,10 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "description": {
@@ -43,7 +36,7 @@
           "settings": {
             "heading": "Materials",
             "icon": "leather",
-            "content": "",
+            "content": "<p>a<\/p>",
             "page": ""
           }
         },
@@ -79,27 +72,102 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "c7ab03af-898c-4459-a1bd-79ccdf2fffb4": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/image_2023-03-28_220351946.png",
+            "heading_1": "Jewelry",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/image_2023-03-29_185344370.png",
+            "heading_2": "Money",
+            "icon_3": "truck",
+            "image_3": "shopify:\/\/shop_images\/image_2023-03-29_185428840.png",
+            "heading_3": "Small Key",
+            "icon_4": "nut_free",
+            "image_4": "shopify:\/\/shop_images\/image_2023-03-29_185625728.png",
+            "heading_4": "Little Things",
+            "icon_5": "truck",
+            "image_5": "shopify:\/\/shop_images\/image_2023-03-29_190121086.png",
+            "heading_5": "Daily Meds",
+            "icon_6": "truck",
+            "image_6": "shopify:\/\/shop_images\/image_2023-03-29_190336076.png",
+            "heading_6": "Heading"
+          }
+        },
+        "3e33ced4-abeb-440a-b835-223131e3653d": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        },
+        "06a6a518-09a3-446b-b258-8be05ed8ee3f": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-card-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#FFFFFF",
+            "arrows_iconColor": "#9A9A9A",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": "better-cream"
+          }
+        },
+        "da84e62e-1ed5-47ed-9512-771d92795efb": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
         }
       },
       "block_order": [
-        "vendor",
+        "5ab1a05d-3722-4135-b5d3-05e20c6ee057",
         "title",
         "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "c7ab03af-898c-4459-a1bd-79ccdf2fffb4",
+        "3e33ced4-abeb-440a-b835-223131e3653d",
+        "06a6a518-09a3-446b-b258-8be05ed8ee3f",
+        "da84e62e-1ed5-47ed-9512-771d92795efb"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "media_size": "large",
-        "gallery_layout": "stacked",
+        "enable_sticky_info": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -107,82 +175,40 @@
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
+    "5e275a9d-f9a1-4f51-bf35-ca3c734031eb": {
+      "type": "section-extra-icons",
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "icon1": "shopify:\/\/shop_images\/image_2023-04-04_191958081.png",
+        "title1": "Shipping",
+        "text1": "Free standard US shipping. No minimums, no tiers, no fine print.",
+        "url1": "https:\/\/www.youtube.com\/watch?v=sVx1mJDeUjY&list=RDIBvf7KUEZ78&index=6",
+        "icon2": "shopify:\/\/shop_images\/image_2023-04-04_193040307.png",
+        "title2": "Returns",
+        "text2": "We offer free exchanges + returns within 30 days of purchase",
+        "url2": "https:\/\/www.youtube.com\/watch?v=sVx1mJDeUjY&list=RDIBvf7KUEZ78&index=6",
+        "icon3": "shopify:\/\/shop_images\/image_2023-04-04_193219430.png",
+        "title3": "Homegrown Brand",
+        "text3": "With zero experience, grandma's sewing machine and a lot of faith...",
+        "url3": "https:\/\/www.youtube.com\/watch?v=sVx1mJDeUjY&list=RDIBvf7KUEZ78&index=6",
+        "icon4": "shopify:\/\/shop_images\/image_2023-04-04_193356433.png",
+        "title4": "Secure Payment",
+        "text4": "Lorem ipsum, lorem upsum, lorem ipsum, lorem ipsum",
+        "url4": "https:\/\/www.youtube.com\/watch?v=sVx1mJDeUjY&list=RDIBvf7KUEZ78&index=6"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
+    "16802289200d04d3d9": {
+      "type": "apps",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "include_margins": true
+      }
+    },
+    "0538f833-a6eb-4d35-95df-ae09d0a6841e": {
+      "type": "section-banner-with-text",
+      "settings": {
+        "banner": "shopify:\/\/shop_images\/image_2023-04-05_185842829.png",
+        "title": "Learn More About Us",
+        "paragraph": "<p>My name is Sydney. I am the founder of the brand BANDITS. I needed safe place to put my wedding ring when I'm outside doing what I love, so I came up with a solution for not just myself but anyone who might need it.<\/p>",
+        "url": "https:\/\/facebook.com"
       }
     },
     "related-products": {
@@ -201,12 +227,53 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "12f1f0cf-7840-40fa-aa8c-5610845418d6": {
+      "type": "section-icons-with-text",
+      "blocks": {
+        "7c0442f1-6c36-454c-a3f8-223dc261b35b": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/image_2023-04-10_203055579.png",
+            "heading_1": "PROTECT JEWELRY",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/image_2023-04-10_204551618.png",
+            "heading_2": "LIGHTWEIGHT",
+            "icon_3": "truck",
+            "image_3": "shopify:\/\/shop_images\/image_2023-04-10_204735179.png",
+            "heading_3": "COMFORTABLE STRETCH",
+            "icon_4": "truck",
+            "image_4": "shopify:\/\/shop_images\/image_2023-04-10_204844100.png",
+            "heading_4": "WATER FRIENDLY",
+            "icon_5": "truck",
+            "image_5": "shopify:\/\/shop_images\/image_2023-04-10_205129531.png",
+            "heading_5": "HIDDEN, SECURE POCKET",
+            "icon_6": "none",
+            "heading_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "7c0442f1-6c36-454c-a3f8-223dc261b35b"
+      ],
+      "settings": {}
+    },
+    "16815081258deb5524": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "5e275a9d-f9a1-4f51-bf35-ca3c734031eb",
+    "16802289200d04d3d9",
+    "0538f833-a6eb-4d35-95df-ae09d0a6841e",
     "related-products",
-    "image-with-text",
-    "multicolumn"
+    "12f1f0cf-7840-40fa-aa8c-5610845418d6",
+    "16815081258deb5524"
   ]
 }

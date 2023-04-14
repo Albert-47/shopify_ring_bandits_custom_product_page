@@ -55,3 +55,7 @@
 .video-container {
     width: 60%;
 }
+
+svg.loox-icon {
+    color: black !important; 
+}
