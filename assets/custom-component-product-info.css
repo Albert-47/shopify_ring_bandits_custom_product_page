@@ -1,5 +1,11 @@
 /* General */
 
+/* Review stars */
+
+svg.loox-icon {
+    color: black !important; 
+}
+
 /* Images layout */
 
 .custom-image-thumbnails-container{
@@ -54,8 +60,4 @@
 
 .video-container {
     width: 60%;
-}
-
-svg.loox-icon {
-    color: black !important; 
 }
