@@ -26,6 +26,29 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+
+    .mini-icon-with-text-container {
+        display: block;
+        margin: -2rem 0;
+    }
+
+    .mini-icons-with-text-container {
+        display: block;
+        margin: 5rem 0;
+    }
+
+    .mini-icon {
+        display: inline-block;
+        margin-right: 1rem;
+        width: 18px;
+        height: 18px;
+    }
+
+    .mini-text {
+        display: inline-block;
+        font-weight: bold;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -306,6 +329,8 @@
 
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+            {% when 'mini-icons-with-text' %}
+              {% render 'mini-icons-with-text' block: block %}
             {%- when 'buy_buttons' -%}
               {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             {%- when 'rating' -%}
@@ -1019,6 +1044,68 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+        }
+      ]
+    },
+    {
+      "type": "mini-icons-with-text",
+      "name": "Mini icons with text",
+      "settings": [
+        {
+          "type": "header",
+          "content": "First"
+        },
+        {
+          "type": "image_picker",
+          "label": "Icon or image 1",
+          "id": "icon1"
+        },
+        {
+          "type": "text",
+          "label": "Text 1",
+          "id": "text1"
+        },
+        {
+          "type": "header",
+          "content": "Second"
+        },
+        {
+          "type": "image_picker",
+          "label": "Icon or image 2",
+          "id": "icon2"
+        },
+        {
+          "type": "text",
+          "label": "Text 2",
+          "id": "text2"
+        },
+        {
+          "type": "header",
+          "content": "Third"
+        },
+        {
+          "type": "image_picker",
+          "label": "Icon or image 3",
+          "id": "icon3"
+        },
+        {
+          "type": "text",
+          "label": "Text 3",
+          "id": "text3"
+        },
+        {
+          "type": "header",
+          "content": "Fourth"
+        },
+        {
+          "type": "image_picker",
+          "label": "Icon or image 4",
+          "id": "icon4"
+        },
+        {
+          "type": "text",
+          "label": "Text 4",
+          "id": "text4"
         }
       ]
     },

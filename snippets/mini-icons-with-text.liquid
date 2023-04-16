@@ -1,0 +1,43 @@
+{% comment %}
+    Accepts the block
+    block: block { Object }
+{% endcomment %}
+
+<div class="mini-icons-with-text-container">
+    {% if block.settings.icon1 != blank %}
+        <mini-icon-with-text class="mini-icon-with-text-container">
+            <img class="mini-icon" src="{{- block.settings.icon1 | img_url -}}" alt="alt-{{- block.settings.text1 -}}">
+            <p class="mini-text">
+                {{- block.settings.text1 -}}
+            </p>
+        </mini-icon-with-text>
+    {% endif %}
+
+    {% if block.settings.icon2 != blank %}
+        <mini-icon-with-text class="mini-icon-with-text-container">
+            <img class="mini-icon" src="{{- block.settings.icon2 | img_url -}}" alt="alt-{{- block.settings.text2 -}}">
+            <p class="mini-text">
+                {{- block.settings.text2 -}}
+            </p>
+        </mini-icon-with-text>
+    {% endif %}
+
+    {% if block.settings.icon3 != blank %}
+        <mini-icon-with-text class="mini-icon-with-text-container">
+            <img class="mini-icon" src="{{- block.settings.icon3 | img_url -}}" alt="alt-{{- block.settings.text3 -}}">
+            <p class="mini-text">
+                {{- block.settings.text3 -}}
+            </p>
+        </mini-icon-with-text>
+    {% endif %}
+
+    {% if block.settings.icon4 != blank %}
+        <mini-icon-with-text class="mini-icon-with-text-container">
+            <img class="mini-icon" src="{{- block.settings.icon4 | img_url -}}" alt="alt-{{- block.settings.text4 -}}">
+            <p class="mini-text">
+                {{- block.settings.text4 -}}
+            </p>
+        </mini-icon-with-text>
+    {% endif %}
+
+</div>

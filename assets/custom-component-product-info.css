@@ -61,3 +61,11 @@ svg.loox-icon {
 .video-container {
     width: 60%;
 }
+
+/* Complementary products */
+
+.share-button {
+    float: right;
+    position: relative;
+    bottom: 6rem;
+}
