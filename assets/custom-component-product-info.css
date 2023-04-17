@@ -1,5 +1,10 @@
 /* General */
 
+div[role="status"].no-js-hidden .price .price__container .price__regular span.price-item {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
 /* Review stars */
 
 svg.loox-icon {
@@ -9,11 +14,11 @@ svg.loox-icon {
 /* Images layout */
 
 .custom-image-thumbnails-container{
-    width: 10%;
+    width: 15%;
 }
 
 .custom-selected-image {
-    width: 90%;
+    width: 85%;
     float: right;
 }
 
@@ -42,6 +47,28 @@ svg.loox-icon {
     width: 50%;
 }
 
+/* Variant Picker */
+
+.variant-option {
+    border-radius: 0 !important;
+    background-color: #F8F8F8 !important;
+    color: black !important;
+    border: none !important;
+    width: 33%;
+}
+
+/* .variant-option:hover {
+    border: 1px solid black !important;
+} */
+input[type="radio"]:checked + label {
+    border: 1px solid black !important;
+  }
+
+
+fieldset.product-form__input {
+    max-width: 100%;
+}
+
 /* Description */
 
 .description-container {
@@ -68,4 +95,34 @@ svg.loox-icon {
     float: right;
     position: relative;
     bottom: 6rem;
+}
+
+.complementary-list {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.complementary-products__container .card--horizontal .card__inner {
+    display: none;
+}
+
+.custom-complement-container:hover {
+    border: 1px solid black;
+}
+
+.custom-complement-container {
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+
+.card-information .price {
+    text-align: center !important;
+}
+
+.quick-add-btn {
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
