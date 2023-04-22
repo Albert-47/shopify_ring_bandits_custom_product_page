@@ -81,7 +81,40 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
+  <div>
+    <div class="top-icons-container">
+    <div class="top-icon-item">
+      <div class="top-icon">
+        {% render 'icon-jewelry' %}
+      </div>
+      <p class="top-icon-text">Protect your Jewelry</p>
+    </div>
+    <div class="top-icon-item">
+      <div class="top-icon">
+        {% render 'icon-wallet' %}
+      </div>
+      <p class="top-icon-text">Hiden, Secure Pocket</p>
+    </div>
+    <div class="top-icon-item">
+      <div class="top-icon">
+        {% render 'icon-water' %}
+      </div>
+      <p class="top-icon-text">Water Friendly + Washable</p>
+    </div>
+    <div class="top-icon-item">
+      <div class="top-icon">
+        {% render 'icon-heart-check' %}
+      </div>
+      <p class="top-icon-text">Homegrown Brand + High-Quality Materials</p>
+    </div>
+  </div>
+
+  <div class="location">
+    <p><span class="main-location">Home</span> <span style="display: inline-block; margin: 0 2rem;">&#62;</span>  Silver Key Ring</p>
+  </div>
+  </div>
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
     </div>

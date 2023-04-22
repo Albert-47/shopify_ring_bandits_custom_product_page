@@ -5,6 +5,34 @@ div[role="status"].no-js-hidden .price .price__container .price__regular span.pr
     font-size: xx-large;
 }
 
+/* Top Icons */
+
+.top-icons-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-icon {
+    display: inline-block;
+    margin-right: 1rem
+}
+
+.top-icon-text {
+    color: #8A8A8A;
+    display: inline-block;
+}
+
+/* Location mini title */
+
+.location {
+    margin: 3rem 0;
+}
+
+.main-location {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /* Review stars */
 
 svg.loox-icon {
@@ -31,6 +59,11 @@ svg.loox-icon {
     width: 100% !important;
 }
 
+/* Buy button */
+
+.product-form__buttons {
+    max-width: 100%;
+}
 
 /* Icons with text */
 

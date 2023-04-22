@@ -7,9 +7,28 @@
           "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {}
         },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "6f007af6-fcb9-42e0-9c8b-b3d3e7efaa09": {
+          "type": "mini-icons-with-text",
+          "settings": {
+            "icon1": "shopify:\/\/shop_images\/image_2023-04-15_170300679.png",
+            "text1": "Save Jewelry, Small Key, Money",
+            "icon2": "shopify:\/\/shop_images\/image_2023-04-15_170300679.png",
+            "text2": "Water Friendly",
+            "icon3": "shopify:\/\/shop_images\/image_2023-04-15_170300679.png",
+            "text3": "Comfortable Stretch",
+            "icon4": "shopify:\/\/shop_images\/image_2023-04-15_170300679.png",
+            "text4": "Lightweight"
+          }
         },
         "price": {
           "type": "price",
@@ -21,6 +40,19 @@
             "picker_type": "button"
           }
         },
+        "3e33ced4-abeb-440a-b835-223131e3653d": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "WOULD YOU TO ADD",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -30,48 +62,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "<p>a<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         },
         "c7ab03af-898c-4459-a1bd-79ccdf2fffb4": {
           "type": "icon-with-text",
@@ -97,41 +87,6 @@
             "heading_6": "Heading"
           }
         },
-        "3e33ced4-abeb-440a-b835-223131e3653d": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": false
-          }
-        },
-        "06a6a518-09a3-446b-b258-8be05ed8ee3f": {
-          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-card-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "maxWidth": 1100,
-            "borderRadius": 8,
-            "itemsPerView": 4,
-            "maxNumberOfCharacters": 100,
-            "imageRatio": "0.72",
-            "reviewerNameColor": "#000000",
-            "textColor": "#000000",
-            "itemBackgroundColor": "#ffffff",
-            "starsColor": "",
-            "starsBackgroundColor": "#ffffff",
-            "arrows_backgroundColor": "#FFFFFF",
-            "arrows_iconColor": "#9A9A9A",
-            "shadow": "offset-dark",
-            "border_active": false,
-            "border_width": 2,
-            "border_color": "#000000",
-            "productIds": "better-cream"
-          }
-        },
         "da84e62e-1ed5-47ed-9512-771d92795efb": {
           "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
@@ -145,19 +100,15 @@
       },
       "block_order": [
         "5ab1a05d-3722-4135-b5d3-05e20c6ee057",
+        "share",
         "title",
+        "6f007af6-fcb9-42e0-9c8b-b3d3e7efaa09",
         "price",
         "variant_picker",
+        "3e33ced4-abeb-440a-b835-223131e3653d",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share",
         "c7ab03af-898c-4459-a1bd-79ccdf2fffb4",
-        "3e33ced4-abeb-440a-b835-223131e3653d",
-        "06a6a518-09a3-446b-b258-8be05ed8ee3f",
         "da84e62e-1ed5-47ed-9512-771d92795efb"
       ],
       "settings": {
@@ -173,6 +124,39 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "16802289200d04d3d9": {
+      "type": "apps",
+      "blocks": {
+        "cf727024-d8cf-48d8-8e2d-d6a1c35b659d": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-card-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": "better-cream"
+          }
+        }
+      },
+      "block_order": [
+        "cf727024-d8cf-48d8-8e2d-d6a1c35b659d"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "5e275a9d-f9a1-4f51-bf35-ca3c734031eb": {
@@ -194,12 +178,6 @@
         "title4": "Secure Payment",
         "text4": "Lorem ipsum, lorem upsum, lorem ipsum, lorem ipsum",
         "url4": "https:\/\/www.youtube.com\/watch?v=sVx1mJDeUjY&list=RDIBvf7KUEZ78&index=6"
-      }
-    },
-    "16802289200d04d3d9": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
       }
     },
     "0538f833-a6eb-4d35-95df-ae09d0a6841e": {
@@ -269,8 +247,8 @@
   },
   "order": [
     "main",
-    "5e275a9d-f9a1-4f51-bf35-ca3c734031eb",
     "16802289200d04d3d9",
+    "5e275a9d-f9a1-4f51-bf35-ca3c734031eb",
     "0538f833-a6eb-4d35-95df-ae09d0a6841e",
     "related-products",
     "12f1f0cf-7840-40fa-aa8c-5610845418d6",
