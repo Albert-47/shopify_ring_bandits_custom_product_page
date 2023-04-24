@@ -80,38 +80,86 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-
   <div>
     <div class="top-icons-container">
-    <div class="top-icon-item">
-      <div class="top-icon">
-        {% render 'icon-jewelry' %}
+      <div class="top-icon-item">
+        <div class="top-icon">
+          {% render 'icon-jewelry' %}
+        </div>
+        <p class="top-icon-text">Protect your Jewelry</p>
       </div>
-      <p class="top-icon-text">Protect your Jewelry</p>
-    </div>
-    <div class="top-icon-item">
-      <div class="top-icon">
-        {% render 'icon-wallet' %}
+      <div class="top-icon-item">
+        <div class="top-icon">
+          {% render 'icon-wallet' %}
+        </div>
+        <p class="top-icon-text">Hiden, Secure Pocket</p>
       </div>
-      <p class="top-icon-text">Hiden, Secure Pocket</p>
-    </div>
-    <div class="top-icon-item">
-      <div class="top-icon">
-        {% render 'icon-water' %}
+      <div class="top-icon-item">
+        <div class="top-icon">
+          {% render 'icon-water' %}
+        </div>
+        <p class="top-icon-text">Water Friendly + Washable</p>
       </div>
-      <p class="top-icon-text">Water Friendly + Washable</p>
-    </div>
-    <div class="top-icon-item">
-      <div class="top-icon">
-        {% render 'icon-heart-check' %}
+      <div class="top-icon-item">
+        <div class="top-icon">
+          {% render 'icon-heart-check' %}
+        </div>
+        <p class="top-icon-text">Homegrown Brand + High-Quality Materials</p>
       </div>
-      <p class="top-icon-text">Homegrown Brand + High-Quality Materials</p>
     </div>
-  </div>
 
-  <div class="location">
-    <p><span class="main-location">Home</span> <span style="display: inline-block; margin: 0 2rem;">&#62;</span>  Silver Key Ring</p>
-  </div>
+    {% comment %}
+      carousel for mobile
+    {% endcomment %}
+
+    <div class="slider-wrapper">
+      <button class="slide-arrow slide-arrow-prev" id="slide-arrow-prev-top">
+        &#8249;
+      </button>
+      
+      <button class="slide-arrow slide-arrow-next" id="slide-arrow-next-top">
+        &#8250;
+      </button>
+      
+      <ul class="slides-container" id="slides-container-top">
+        <li class="slide">
+          <div class="top-icon-item">
+            <div class="top-icon">
+              {% render 'icon-jewelry' %}
+            </div>
+            <p class="top-icon-text">Protect your Jewelry</p>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="top-icon-item">
+            <div class="top-icon">
+              {% render 'icon-wallet' %}
+            </div>
+            <p class="top-icon-text">Hiden, Secure Pocket</p>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="top-icon-item">
+            <div class="top-icon">
+              {% render 'icon-water' %}
+            </div>
+            <p class="top-icon-text">Water Friendly + Washable</p>
+          </div>
+        </li>
+        <li class="slide">
+          <div class="top-icon-item">
+            <div class="top-icon">
+              {% render 'icon-heart-check' %}
+            </div>
+            <p class="top-icon-text">Homegrown Brand + High-Quality Materials</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="location">
+      <p><span class="main-location">Home</span> <span style="display: inline-block; margin: 0 2rem;">&#62;</span>  Silver Key Ring</p>
+    </div>
   </div>
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
 
@@ -140,9 +188,9 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+                <h1 class="special-font">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
+                  <h2 class="h1 special-font">
                     {{ product.title | escape }}
                   </h2>
                 </a>
@@ -617,6 +665,21 @@
         hiddenInput.value = event.currentTarget.value;
       });
     });
+
+    const slidesContainer = document.getElementById('slides-container-top');
+    const slide = document.querySelector('.slide');
+    const prevButton = document.getElementById('slide-arrow-prev-top');
+    const nextButton = document.getElementById('slide-arrow-next-top');
+
+    nextButton.addEventListener('click', (event) => {
+      const slideWidth = slide.clientWidth;
+      slidesContainer.scrollLeft += slideWidth;
+      });
+      
+      prevButton.addEventListener('click', () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft -= slideWidth;
+        });
   </script>
 
   {%- liquid

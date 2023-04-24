@@ -96,7 +96,129 @@
 
     </div>
 
+    {% comment %}
+      Carousel
+    {% endcomment %}
+
+    <div class="slider-wrapper">
+      <button class="slide-arrow slide-arrow-prev" id="slide-arrow-prev">
+        &#8249;
+      </button>
+      
+      <button class="slide-arrow slide-arrow-next" id="slide-arrow-next">
+        &#8250;
+      </button>
+      
+      <ul class="slides-container" id="slides-container">
+        <li class="slide-icon">
+          {% if section.settings.icon1 != blank %}
+            <div class="icon-item">
+                <img
+                src="{{ section.settings.icon1 | image_url }}"
+                role="presentation"
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+              {% if section.settings.title1 != blank %}
+                <h3 style="margin-top: 2rem;">{{- section.settings.title1 -}}</h3>
+              {% endif %}
+              {% if section.settings.text1 != blank %}
+                <p style="margin-top: 2rem;">{{- section.settings.text1 -}}</p>
+              {% endif %}
+              {% if section.settings.url1 != blank %}
+                <a class="lm-text" target="_blank" href="{{- section.settings.url1 -}}">Learn more</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </li>
+        <li class="slide-icon">
+          {% if section.settings.icon2 != blank %}
+            <div class="icon-item">
+                <img
+                src="{{ section.settings.icon2 | image_url }}"
+                role="presentation"
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+              {% if section.settings.title2 != blank %}
+                <h3 style="margin-top: 2rem;">{{- section.settings.title2 -}}</h3>
+              {% endif %}
+              {% if section.settings.text2 != blank %}
+                <p style="margin-top: 2rem;">{{- section.settings.text2 -}}</p>
+              {% endif %}
+              {% if section.settings.url2 != blank %}
+                <a class="lm-text" target="_blank" href="{{- section.settings.url2 -}}">Learn more</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </li>
+        <li class="slide-icon">
+          {% if section.settings.icon3 != blank %}
+            <div class="icon-item">
+                <img
+                src="{{ section.settings.icon3 | image_url }}"
+                role="presentation"
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+              {% if section.settings.title3 != blank %}
+                <h3 style="margin-top: 2rem;">{{- section.settings.title3 -}}</h3>
+              {% endif %}
+              {% if section.settings.text3 != blank %}
+                <p style="margin-top: 2rem;">{{- section.settings.text3 -}}</p>
+              {% endif %}
+              {% if section.settings.url3 != blank %}
+                <a class="lm-text" target="_blank" href="{{- section.settings.url3 -}}">Learn more</a>
+            {% endif %}
+            </div>
+          {% endif %}
+        </li>
+        <li class="slide-icon">
+          {% if section.settings.icon4 != blank %}
+            <div class="icon-item">
+                <img
+                src="{{ section.settings.icon4 | image_url }}"
+                role="presentation"
+                height="auto"
+                width="auto"
+                loading="lazy"
+              >
+              {% if section.settings.title4 != blank %}
+                <h3 style="margin-top: 2rem;">{{- section.settings.title4 -}}</h3>
+              {% endif %}
+              {% if section.settings.text4 != blank %}
+                <p style="margin-top: 2rem;">{{- section.settings.text4 -}}</p>
+              {% endif %}
+              {% if section.settings.url4 != blank %}
+                <a class="lm-text" target="_blank" href="{{- section.settings.url4 -}}">Learn more</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+
     <hr class="hr">
+
+    <script>
+
+      const slidesContainer2 = document.getElementById('slides-container');
+      const slide2 = document.querySelector('.slide-icon');
+      const prevButton2 = document.getElementById('slide-arrow-prev');
+      const nextButton2 = document.getElementById('slide-arrow-next');
+  
+      nextButton2.addEventListener('click', () => {
+          const slideWidth = slide2.clientWidth;
+          slidesContainer2.scrollLeft += slideWidth;
+      });
+      prevButton2.addEventListener('click', () => {
+          const slideWidth = slide2.clientWidth;
+          slidesContainer2.scrollLeft -= slideWidth;
+      });
+    </script>
 
 
 </section>
