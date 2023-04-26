@@ -144,6 +144,10 @@ svg.loox-icon {
     .custom-image-thumbnail {
         width: 100% !important;
     }
+
+    .product--thumbnail_slider .slider-mobile-gutter .slider-button {
+        display: none !important;
+    }
 }
 
 /* Buy button */
@@ -211,6 +215,7 @@ input[type="radio"]:checked + label {
 
 fieldset.product-form__input {
     max-width: 100%;
+    display: flex;
 }
 
 /* Description */
@@ -231,8 +236,17 @@ fieldset.product-form__input {
 }
 
 .video-container {
-    width: 60%;
+    width: 53%;
     height: 40rem;
+}
+
+.product__description {
+    width: 44%;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -240,6 +254,10 @@ fieldset.product-form__input {
         width: 100%;
         height: 19rem;
         margin-top: 3rem;
+    }
+
+    .product__description {
+        width: 100%;
     }
 }
 
@@ -249,6 +267,10 @@ fieldset.product-form__input {
     float: right;
     position: relative;
     bottom: 6rem;
+}
+
+.share-button button {
+    color: black;
 }
 
 .complementary-list {
